@@ -1,0 +1,105 @@
+<!DOCTYPE html><html><head><title>Taunting Elf</title>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="shortcut icon" href="favicon.ico">
+<meta name="viewport" content="width=550, initial-scale=1">
+
+</head>
+
+<body>
+	<center>
+
+		<table style="position:absolute; left:10px; top:10px; background-color:black;">
+			<td>
+				<a href="#popup1"><img title="Information" src="../../jdgmiles.github.io/questionmark.png" style="width:60px; height:60px"></a><br>
+				<a href="https://twitter.com/jimdgmiles" target=blank_><img title="James Miles on Twitter" src="../../jdgmiles.github.io/twitter.png" style="width:60px; height:60px"></a><br>
+				<a href="http://jdgmiles.github.io/" target="_blank"><img title="Projects Page" src="../../jdgmiles.github.io/jdgm.png" style="width:60px; height:60px"></a><br>
+			</td>
+		</table>
+
+		<div id="popup1" class="overlay">
+			<div class="popup" style="text-align:center">
+				<a class="close" style="right: 30px;" href="#">&times;</a>
+				<div style="font-family:Georgia; color:white; text-decoration:underline; font-size:55px">King Simon</div><br>
+				<span style="font-family:Georgia; font-size:55px; color:white;">A basic face transform.<br></span><br>
+			</div>
+		</div>
+
+		<br>
+		<canvas id="canvas" style="padding:0px 80px 0px 80px;"></canvas>
+  </center>
+</body>
+</html>
+
+<script type="text/javascript">
+var field={width:450, height:500};
+var fieldcolor="black";
+var kingsimon=new Image();
+kingsimon.src="King Simon.png";
+var grimace=new Image();
+grimace.src="Grimace.png";
+var tongueout=new Image();
+tongueout.src="Tongue-Out.png";
+var fps=65;
+var time=0;
+var rotatespeed=24;
+var pausetime=40;
+var timetransposed=0;
+var verticaladjust=212;
+
+
+var canvas = document.getElementById("canvas"),
+    ctx = canvas.getContext("2d");
+
+canvas.width = field.width;
+canvas.height = field.height;
+
+function draw(){
+
+	ctx.fillStyle=fieldcolor;
+	ctx.fillRect(0, 0, field.width, field.height);
+
+	ctx.drawImage(kingsimon, (field.width-1)/2-140, 0);
+
+	if(time<2*rotatespeed){
+		ctx.save();
+		ctx.translate(field.width/2,field.height/2);
+		ctx.globalAlpha = time/(2*rotatespeed);
+		ctx.drawImage(tongueout, -107, -verticaladjust);
+		ctx.rotate(time*Math.PI/rotatespeed);
+		ctx.globalAlpha = 1-time/(2*rotatespeed);
+		ctx.drawImage(grimace, -107, -verticaladjust);
+		ctx.globalAlpha = time/(2*rotatespeed);
+		ctx.drawImage(tongueout, -107, -verticaladjust);
+		ctx.restore();
+	}
+
+	if(time>=2*rotatespeed && time<2*rotatespeed+pausetime){
+		ctx.drawImage(tongueout, field.width/2-107, field.height/2-verticaladjust);
+	}
+
+	if(time>=2*rotatespeed+pausetime && time<4*rotatespeed+pausetime){
+		timetransposed=time-(2*rotatespeed+pausetime);
+		ctx.save();
+		ctx.translate(field.width/2,field.height/2);
+		ctx.globalAlpha = 1-timetransposed/(2*rotatespeed);
+		ctx.drawImage(tongueout, -107, -verticaladjust);
+		ctx.rotate(timetransposed*Math.PI/rotatespeed);
+		ctx.globalAlpha = timetransposed/(2*rotatespeed);
+		ctx.drawImage(grimace, -107, -verticaladjust);
+		ctx.globalAlpha = 1-timetransposed/(2*rotatespeed);
+		ctx.drawImage(tongueout, -107, -verticaladjust);
+		ctx.restore();
+	}
+
+	time++;
+
+	if(time==4*rotatespeed+2*pausetime){time=0;}
+
+	setTimeout(draw, 1000/fps);
+
+}
+
+draw();
+
+</script>
