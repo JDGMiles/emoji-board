@@ -13,97 +13,118 @@
 			<div class="popup" style="text-align:center">
 				<a class="close" style="right: 30px;" href="#">&times;</a>
 				<div style="font-family:Georgia; color:white; text-decoration:underline; font-size:49px">Emoji Board</div><br>
-				<span style="font-family:Georgia; font-size:35px; color:white;">Click an emoji to copy it to your clipboard.<br></span><br>
+				<span style="font-family:Georgia; font-size:35px; color:white;">Click emojis to copy them to your clipboard.<br style="font-size:50px">The box on the bottom left shows what you have copied.<br style="font-size:50px">Click  <img onclick="copyToClipboard(document.getElementById('F1')); document.getElementById('clipboardzone').innerHTML=''; for(i=0; i<maxcharacters; i++){tobecopied[i]='';} var copystring='';" title="Clear" src="../jdgmiles.github.io/Vanish-White.png" style="width:28px; height:28px;">  to clear.</span><br style="font-size:30px">
 			</div>
 		</div>
 
 		<table>
-
 			<td align="center" style="padding:0px 30px 0px 0px">
-				<span class="listedstuff" onclick="copyToClipboard(this)">😂</span><br>
-				<span class="listedstuff" onclick="copyToClipboard(this)">🐒</span><br>
-				<span class="listedstuff" onclick="copyToClipboard(this)">🍱</span><br>
-				<span class="listedstuff" onclick="copyToClipboard(this)">🇬🇧</span><br>
-				<span class="listedstuff" onclick="copyToClipboard(this)">🏆</span><br>
+				<span class="listedstuff" onclick="addToClipboard(this.innerHTML)">😂</span><br>
+				<span class="listedstuff" onclick="addToClipboard(this.innerHTML)">🐒</span><br>
+				<span class="listedstuff" onclick="addToClipboard(this.innerHTML)">🍱</span><br>
+				<span class="listedstuff" onclick="addToClipboard(this.innerHTML)">🇬🇧</span><br>
+				<span class="listedstuff" onclick="addToClipboard(this.innerHTML)">🏆</span><br>
 			</td>
 
 			<td align="center" style="padding:0px 30px 0px 0px">
-				<span class="listedstuff" onclick="copyToClipboard(this)">😆</span><br>
-				<span class="listedstuff" onclick="copyToClipboard(this)">🐕</span><br>
-				<span class="listedstuff" onclick="copyToClipboard(this)">🍩</span><br>
-				<span class="listedstuff" onclick="copyToClipboard(this)">🇯🇵</span><br>
-				<span class="listedstuff" onclick="copyToClipboard(this)">🎟️</span><br>
+				<span class="listedstuff" onclick="addToClipboard(this.innerHTML)">😆</span><br>
+				<span class="listedstuff" onclick="addToClipboard(this.innerHTML)">🐕</span><br>
+				<span class="listedstuff" onclick="addToClipboard(this.innerHTML)">🍩</span><br>
+				<span class="listedstuff" onclick="addToClipboard(this.innerHTML)">🇯🇵</span><br>
+				<span class="listedstuff" onclick="addToClipboard(this.innerHTML)">🎟️</span><br>
 			</td>
 
 			<td align="center" style="padding:0px 30px 0px 0px">
-				<span class="listedstuff" onclick="copyToClipboard(this)">🤔</span><br>
-				<span class="listedstuff" onclick="copyToClipboard(this)">🐑</span><br>
-				<span class="listedstuff" onclick="copyToClipboard(this)">🥂</span><br>
-				<span class="listedstuff" onclick="copyToClipboard(this)">🇩🇪</span><br>
-				<span class="listedstuff" onclick="copyToClipboard(this)">🥇</span><br>
+				<span class="listedstuff" onclick="addToClipboard(this.innerHTML)">🤔</span><br>
+				<span class="listedstuff" onclick="addToClipboard(this.innerHTML)">🐑</span><br>
+				<span class="listedstuff" onclick="addToClipboard(this.innerHTML)">🥂</span><br>
+				<span class="listedstuff" onclick="addToClipboard(this.innerHTML)">🇩🇪</span><br>
+				<span class="listedstuff" onclick="addToClipboard(this.innerHTML)">🥇</span><br>
 			</td>
 
 			<td align="center" style="padding:0px 30px 0px 0px">
-				<span class="listedstuff" onclick="copyToClipboard(this)">🙄</span><br>
-				<span class="listedstuff" onclick="copyToClipboard(this)">🐼</span><br>
-				<span class="listedstuff" onclick="copyToClipboard(this)">🍰</span><br>
-				<span class="listedstuff" onclick="copyToClipboard(this)">🇬🇷</span><br>
-				<span class="listedstuff" onclick="copyToClipboard(this)">🥈</span><br>
+				<span class="listedstuff" onclick="addToClipboard(this.innerHTML)">🙄</span><br>
+				<span class="listedstuff" onclick="addToClipboard(this.innerHTML)">🐼</span><br>
+				<span class="listedstuff" onclick="addToClipboard(this.innerHTML)">🍰</span><br>
+				<span class="listedstuff" onclick="addToClipboard(this.innerHTML)">🇬🇷</span><br>
+				<span class="listedstuff" onclick="addToClipboard(this.innerHTML)">🥈</span><br>
 			</td>
 
 			<td align="center" style="padding:0px 30px 0px 0px">
-				<span class="listedstuff" onclick="copyToClipboard(this)">😘</span><br>
-				<span class="listedstuff" onclick="copyToClipboard(this)">🦀</span><br>
-				<span class="listedstuff" onclick="copyToClipboard(this)">🍔</span><br>
-				<span class="listedstuff" onclick="copyToClipboard(this)">🇮🇹</span><br>
-				<span class="listedstuff" onclick="copyToClipboard(this)">🥉</span><br>
+				<span class="listedstuff" onclick="addToClipboard(this.innerHTML)">😘</span><br>
+				<span class="listedstuff" onclick="addToClipboard(this.innerHTML)">🦀</span><br>
+				<span class="listedstuff" onclick="addToClipboard(this.innerHTML)">🍔</span><br>
+				<span class="listedstuff" onclick="addToClipboard(this.innerHTML)">🇮🇹</span><br>
+				<span class="listedstuff" onclick="addToClipboard(this.innerHTML)">🥉</span><br>
 			</td>
 
 			<td align="center" style="padding:0px 30px 0px 0px">
-				<span class="listedstuff" onclick="copyToClipboard(this)">🤒</span><br>
-				<span class="listedstuff" onclick="copyToClipboard(this)">🌹</span><br>
-				<span class="listedstuff" onclick="copyToClipboard(this)">🥐</span><br>
-				<span class="listedstuff" onclick="copyToClipboard(this)">🇺🇸</span><br>
-				<span class="listedstuff" onclick="copyToClipboard(this)">🥊</span><br>
+				<span class="listedstuff" onclick="addToClipboard(this.innerHTML)">🤒</span><br>
+				<span class="listedstuff" onclick="addToClipboard(this.innerHTML)">🌹</span><br>
+				<span class="listedstuff" onclick="addToClipboard(this.innerHTML)">🥐</span><br>
+				<span class="listedstuff" onclick="addToClipboard(this.innerHTML)">🇺🇸</span><br>
+				<span class="listedstuff" onclick="addToClipboard(this.innerHTML)">🥊</span><br>
 			</td>
 
 			<td align="center" style="padding:0px 30px 0px 0px">
-				<span class="listedstuff" onclick="copyToClipboard(this)">😤</span><br>
-				<span class="listedstuff" onclick="copyToClipboard(this)">🕷️</span><br>
-				<span class="listedstuff" onclick="copyToClipboard(this)">🍓</span><br>
-				<span class="listedstuff" onclick="copyToClipboard(this)">🇮🇱</span><br>
-				<span class="listedstuff" onclick="copyToClipboard(this)">🏋️</span><br>
+				<span class="listedstuff" onclick="addToClipboard(this.innerHTML)">😤</span><br>
+				<span class="listedstuff" onclick="addToClipboard(this.innerHTML)">🕷️</span><br>
+				<span class="listedstuff" onclick="addToClipboard(this.innerHTML)">🍓</span><br>
+				<span class="listedstuff" onclick="addToClipboard(this.innerHTML)">🇮🇱</span><br>
+				<span class="listedstuff" onclick="addToClipboard(this.innerHTML)">🏋️</span><br>
 			</td>
 
 			<td>
-				<span class="listedstuff" onclick="copyToClipboard(this)">😟</span><br>
-				<span class="listedstuff" onclick="copyToClipboard(this)">🦋 </span><br>
-				<span class="listedstuff" onclick="copyToClipboard(this)">🍋</span><br>
-				<span class="listedstuff" onclick="copyToClipboard(this)">🇫🇷</span><br>
-				<span class="listedstuff" onclick="copyToClipboard(this)">🎲</span><br>
+				<span class="listedstuff" onclick="addToClipboard(this.innerHTML)">😟</span><br>
+				<span class="listedstuff" onclick="addToClipboard(this.innerHTML)">🦋 </span><br>
+				<span class="listedstuff" onclick="addToClipboard(this.innerHTML)">🍋</span><br>
+				<span class="listedstuff" onclick="addToClipboard(this.innerHTML)">🇫🇷</span><br>
+				<span class="listedstuff" onclick="addToClipboard(this.innerHTML)">🎲</span><br>
 			</td>
+		</table>
 
-	</table>
+		<br>
 
-	<br>
+		<table style="background-color:black;">
+			<td style="width:630px; border: solid white 2px; border-radius:17px; text-align:center;">
+				<a class="clipboard" id="clipboardzone"><span style="opacity:0">🍋</span></a>
+			</td>
+			<td>
+				<img title="Spacer" src="../jdgmiles.github.io/jdgm.png" style="width:60px; height:60px; opacity:0;">
+				<img onclick="copyToClipboard(document.getElementById('F1')); document.getElementById('clipboardzone').innerHTML=''; for(i=0; i<maxcharacters; i++){tobecopied[i]='';} var copystring='';" title="Clear" src="../jdgmiles.github.io/Vanish-White.png" style="width:60px; height:60px;">
+				<a href="#popup1"><img title="Information" src="../jdgmiles.github.io/questionmark.png" style="width:60px; height:60px"></a>
+				<a href="https://twitter.com/jimdgmiles" target=blank_><img title="James Miles on Twitter" src="../jdgmiles.github.io/twitter.png" style="width:60px; height:60px"></a>
+				<a href="http://jdgmiles.github.io/" target="_blank"><img title="Projects Page" src="../jdgmiles.github.io/jdgm.png" style="width:60px; height:60px"></a>
+				<img onclick="copyToClipboard(document.getElementById('F0'))" title="Address" src="../jdgmiles.github.io/jdgm.png" style="width:60px; height:60px; opacity:0;">
+				<span id="F0" style="font-size:0px;">https://goo.gl/maps/UZsyADdjFa72</span>
+				<span id="F1" style="font-size:0px;"> </span><br>
+			</td>
+		</table>
 
-	<table style="background-color:black;">
-		<td>
-			<img onclick="copyToClipboard(document.getElementById('F0'))" title="Address" src="../jdgmiles.github.io/jdgm.png" style="width:60px; height:60px; opacity:0;">
-			<a href="#popup1"><img title="Information" src="../jdgmiles.github.io/questionmark.png" style="width:60px; height:60px"></a>
-			<a href="https://twitter.com/jimdgmiles" target=blank_><img title="James Miles on Twitter" src="../jdgmiles.github.io/twitter.png" style="width:60px; height:60px"></a>
-			<a href="http://jdgmiles.github.io/" target="_blank"><img title="Projects Page" src="../jdgmiles.github.io/jdgm.png" style="width:60px; height:60px"></a>
-			<img onclick="copyToClipboard(document.getElementById('F0'))" title="Address" src="../jdgmiles.github.io/jdgm.png" style="width:60px; height:60px; opacity:0;">
-			<span id="F0" style="font-size:0px;">https://goo.gl/maps/UZsyADdjFa72</span><br>
-		</td>
-	</table>
-
-	  </center>
+	</center>
 </body>
 </html>
 
 <script type="text/javascript">
+var tobecopied=[];
+var maxcharacters=12;
+var currentcharacters=0;
+for(i=0; i<maxcharacters; i++){tobecopied[i]="";}
+var copystring="";
 
+function addToClipboard(x) {
+	currentcharacters++;
+	if(currentcharacters==maxcharacters){
+		for(i=0; i<maxcharacters-1; i++){tobecopied[i]=tobecopied[i+1]}
+		currentcharacters--;
+	}
+	tobecopied[currentcharacters]=x;
+
+	copystring="";
+	for(i=0; i<maxcharacters; i++){copystring=copystring+""+tobecopied[i];}
+	document.getElementById("clipboardzone").innerHTML=copystring;
+	copyToClipboard(document.getElementById("clipboardzone"));
+}
 function copyToClipboard(elem) {
 	  // create hidden text element, if it doesn't already exist
     var targetId = "_hiddenCopyText_";

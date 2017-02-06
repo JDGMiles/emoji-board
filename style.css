@@ -8,6 +8,8 @@ a:link {color: red; text-decoration: none;}
 a:link:hover {text-decoration:underline}
 a:visited {color:#DD0000;}
 
+.clipboard {font-size:40px;}
+
 .overlay {
   position: fixed;
   top: 0;
@@ -26,12 +28,12 @@ a:visited {color:#DD0000;}
 }
 
 .popup {
-  margin: 200px auto;
+  margin: 180px auto;
   padding: 20px;
   background: #181818;
   border:2px solid #AAAAAA;
   border-radius: 20px;
-  width: 360px;
+  width: 480px;
   position: relative;
   transition: all 0s ease-in-out;
 }
