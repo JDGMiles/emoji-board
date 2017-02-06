@@ -1,4 +1,4 @@
-@font-face {font-family: Liberation Serif; src: url(http://jdgmiles.github.io/LiberationSerif.woff);}
+@font-face {font-family: Liberation Serif; src: url(../jdgmiles.github.io/LiberationSerif.woff);}
 
 body {color: white; background-color:#000000;}
 
@@ -8,7 +8,7 @@ a:link {color: red; text-decoration: none;}
 a:link:hover {text-decoration:underline}
 a:visited {color:#DD0000;}
 
-.clipboard {font-size:40px;}
+.clipboard {font-size:40px; font-family:Liberation Serif;}
 
 .overlay {
   position: fixed;
